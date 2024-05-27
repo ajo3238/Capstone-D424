@@ -4,6 +4,7 @@ package edu.wgu.d387_sample_code.rest;
 import edu.wgu.d387_sample_code.convertor.*;
 import edu.wgu.d387_sample_code.entity.ReservationEntity;
 import edu.wgu.d387_sample_code.entity.RoomEntity;
+import edu.wgu.d387_sample_code.locale.DisplayLanguageMessage;
 import edu.wgu.d387_sample_code.model.request.ReservationRequest;
 import edu.wgu.d387_sample_code.model.response.ReservableRoomResponse;
 import edu.wgu.d387_sample_code.model.response.ReservationResponse;
@@ -21,16 +22,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -152,5 +148,4 @@ public class ReservationResource {
 
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
-
 }
