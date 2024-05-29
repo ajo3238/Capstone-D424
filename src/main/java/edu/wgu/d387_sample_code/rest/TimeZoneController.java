@@ -32,7 +32,7 @@ public class TimeZoneController {
 
     DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 
-    private final Executor executor = Executors.newFixedThreadPool(2);
+    private final Executor executor = Executors.newFixedThreadPool(3);
 
 
     @RequestMapping(path ="presentation", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
